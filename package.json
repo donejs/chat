@@ -1,0 +1,59 @@
+{
+  "name": "donejs-chat",
+  "version": "0.0.0",
+  "description": "A chat application. Built with DoneJS",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "scripts": {
+    "test": "testee src/test.html --browsers firefox --reporter Spec",
+    "start": "can-serve --port 8080",
+    "develop": "can-serve --develop --port 8080",
+    "document": "documentjs",
+    "build": "steal-tools"
+  },
+  "main": "donejs-chat/index.stache!done-autorender",
+  "files": [
+    "src"
+  ],
+  "keywords": [],
+  "system": {
+    "main": "donejs-chat/index.stache!done-autorender",
+    "directories": {
+      "lib": "src"
+    },
+    "configDependencies": [
+      "live-reload"
+    ],
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "donejs-deploy",
+      "generator-donejs"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "can": "^2.3.0-pre.11",
+    "can-connect": "^0.2.8",
+    "can-ssr": "^0.5.8",
+    "done-autorender": "^0.4.1",
+    "done-component": "^0.2.0",
+    "done-css": "^1.1.8",
+    "generator-donejs": "^0.2.11",
+    "jquery": "^2.1.4",
+    "steal": "^0.11.1",
+    "yeoman-environment": "^1.2.7"
+  },
+  "devDependencies": {
+    "documentjs": "^0.3.0",
+    "donejs-deploy": "^0.1.6",
+    "funcunit": "^3.0.0",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.11.0",
+    "testee": "^0.2.1"
+  }
+}

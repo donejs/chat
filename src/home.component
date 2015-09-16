@@ -1,0 +1,26 @@
+<can-component tag="chat-home">
+  <style type="less">
+    display: block;
+    margin-top: 15%;
+
+    p { font-weight: bold; }
+    h1.page-header { margin-top: 0; }
+  </style>
+  <template>
+    <h1 class="page-header">donejs-chat</h1>
+    <div class="form-group">
+      <input type="text" class="form-control" id="username" placeholder="Your username" can-value="{username}">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" (click)="{login}">Start chat</button>
+  </template>
+  <view-model>
+    import Map from 'can/map/';
+    import 'can/map/define/';
+
+    export default Map.extend({
+      login() {
+        this.attr('page', 'chat');
+      }
+    });
+  </view-model>
+</can-component>

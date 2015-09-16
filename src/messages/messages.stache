@@ -1,0 +1,2 @@
+<can-import from="donejs-chat/models/message" />
+<p>Hello {{username}}</p>

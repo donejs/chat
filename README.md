@@ -1,2 +1,1 @@
-# chat
-A DoneJS demo chat application
+# donejs-chat
