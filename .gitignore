@@ -32,3 +32,4 @@ docs
 .idea/
 db-data/
 dist/
+.divshot-cache/
