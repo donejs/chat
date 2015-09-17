@@ -31,5 +31,5 @@ node_modules
 docs
 .idea/
 db-data/
-dist/
+# dist/
 .divshot-cache/
