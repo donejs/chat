@@ -1,2 +1,15 @@
 <can-import from="donejs-chat/models/message" />
 <p>Hello {{username}}</p>
+
+<message-model get-list="{}">
+    <ul>
+        {{#each ./value}}
+        <li>{{username}}: {{text}}</li>
+        {{/each}}
+    </ul>
+</message-model>
+
+<div class="form-group">
+    <input type="text" class="form-control" id="text" placeholder="Your message" can-value="{text}">
+</div>
+<button type="submit" class="btn btn-primary btn-block" (click)="{send}">Send message</button>

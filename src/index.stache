@@ -13,13 +13,15 @@
       <div class="row">
         {{#switch page}}
           {{#case 'chat'}}
-          <can-import from="donejs-chat/messages/" />
-          <chat-messages username="{username}" class="col-sm-6 col-sm-offset-3"></chat-messages>
+          <can-import from="donejs-chat/messages/" can-tag="chat-loader">
+            <chat-messages username="{username}" class="col-sm-6 col-sm-offset-3"></chat-messages>
+          </can-import>
           {{/case}}
 
           {{#default}}
-          <can-import from="donejs-chat/home.component!" />
-          <chat-home page="{page}" username="{username}" class="well col-sm-4 col-sm-offset-4"></chat-home>
+          <can-import from="donejs-chat/home.component!" can-tag="chat-loader">
+            <chat-home page="{page}" username="{username}" class="well col-sm-4 col-sm-offset-4"></chat-home>
+          </can-import>
           {{/default}}
         {{/switch}}
       </div>

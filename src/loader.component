@@ -5,6 +5,10 @@
     p { font-weight: bold; }
   </style>
   <template>
-    <p>Loading...</p>
+      {{#eq state "resolved"}}
+      <content></content>
+      {{else}}
+      <div class="loading">Loading...</div>
+      {{/eq}}
   </template>
 </can-component>

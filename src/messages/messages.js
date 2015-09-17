@@ -3,12 +3,14 @@ import Map from 'can/map/';
 import 'can/map/define/';
 import './messages.less!';
 import template from './messages.stache!';
+import Message from '../models/message';
 
 export const ViewModel = Map.extend({
-  define: {
-    message: {
-      value: 'This is the chat-messages component'
-    }
+  send() {
+    new Message({
+      username: this.attr('username'),
+      text: this.attr('text')
+    }).save();
   }
 });
 

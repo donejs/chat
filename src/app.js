@@ -9,10 +9,16 @@ const AppViewModel = AppMap.extend({
     title: {
       value: 'donejs-chat',
       serialize: false
+    },
+    username: {
+      value: ''
+    },
+    page: {
+      value: ''
     }
   }
 });
 
-route('/:page', { page: 'login' });
+route('/:username/:page', { page: 'login', username: '' });
 
 export default AppViewModel;
