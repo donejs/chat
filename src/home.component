@@ -7,28 +7,6 @@
   <template>
     <can-import from="donejs-chat/models/message" />
     <h1 class="page-header">donejs-chat</h1>
-    <p>Currently chatting:</p>
-    <message-model get-list="{}">
-      {{#if isPending}}
-        Loading conversations...
-      {{else}}
-        <ul class="list-group">
-          {{#each value.statistics}}
-          <li class="list-group-item"><strong>{{name}}</strong> <span class="badge pull-right">{{count}}</span></li>
-          {{/each}}
-        </ul>
-      {{/if}}
-    </message-model>
-    <button type="submit" class="btn btn-primary btn-block" (click)="{chat}">Start chat</button>
+    <a can-href="{ page='chat' }" class="btn btn-primary btn-block" (click)="{chat}">Start chat</a>
   </template>
-  <view-model>
-    import Map from 'can/map/';
-    import 'can/map/define/';
-
-    export default Map.extend({
-      chat() {
-        this.attr('page', 'chat');
-      }
-    });
-  </view-model>
 </can-component>

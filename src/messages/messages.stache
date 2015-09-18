@@ -1,33 +1,31 @@
 <can-import from="donejs-chat/models/message" />
 
 <message-model get-list="{}">
-  {{#each ./value}}
+  <h5><a can-href="{ page='home' }">Home</a></h5>
   <div class="list-group">
-    <a href="#" class="list-group-item">
-      <h4 class="list-group-item-heading">{{name}}</h4>
-      <p class="list-group-item-text">{{message}}</p>
-    </a>
-  </div>
-  {{/each}}
-  {{^if ./value.length}}
-  <div class="list-group">
-    <a href="#" class="list-group-item">
+    {{#each ./value}}
+      <a class="list-group-item">
+        <h4 class="list-group-item-heading">{{name}}</h4>
+        <p class="list-group-item-text">{{message}}</p>
+      </a>
+    {{/each}}
+    {{^if ./value.length}}
+    <a class="list-group-item">
       <h4 class="list-group-item-heading">No messages</h4>
     </a>
+    {{/if}}
   </div>
-  {{/if}}
 </message-model>
 
-<form (submit)="{send}" prevent-default>
-  <div class="row">
-    <div class="col-sm-3">
-      <input type="text" class="form-control" id="name" placeholder="Your name" can-value="{name}">
-    </div>
-    <div class="col-sm-7">
-      <input type="text" class="form-control" id="message" placeholder="Your message" can-value="{message}">
-    </div>
-    <div class="col-sm-2">
-      <button type="submit" class="btn btn-primary btn-block">Send</button>
-    </div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="name" placeholder="Your name" can-value="{name}">
   </div>
-</form>
+  <div class="col-sm-7">
+    <input type="text" class="form-control" id="message" placeholder="Your message" can-value="{message}" (enter)="{send}">
+  </div>
+  <div class="col-sm-2">
+    <button type="submit" class="btn btn-primary btn-block" (click)="{send}">Send</button>
+  </div>
+</div>

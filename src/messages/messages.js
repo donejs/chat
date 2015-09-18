@@ -6,7 +6,7 @@ import template from './messages.stache!';
 import Message from '../models/message';
 
 export const ViewModel = Map.extend({
-  send(ctx, ev) {
+  send() {
     new Message({
       name: this.attr('name'),
       message: this.attr('message')
