@@ -32,7 +32,7 @@ tag('message-model', messageConnection);
 
 export default Message;
 
-if(io) {
+if(typeof io === 'function') {
   const socket = io();
 
   socket.on('messages created', order => messageConnection.createInstance(order));
