@@ -7,6 +7,18 @@
   <template>
     <can-import from="donejs-chat/models/message" />
     <h1 class="page-header">donejs-chat</h1>
+
+    <can-import from="bit-tabs/unstyled"/>
+    
+    <bit-tabs tabs-class="nav nav-tabs">
+        <bit-panel title="CanJS">
+          CanJS provides the MV*
+        </bit-panel>
+        <bit-panel title="StealJS">
+          StealJS provides the infrastructure.
+        </bit-panel>
+    </bit-tabs>
+
     <a can-href="{ page='chat' }" class="btn btn-primary btn-block" (click)="{chat}">Start chat</a>
   </template>
 </can-component>
