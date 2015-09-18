@@ -7,23 +7,32 @@
     <can-import from="bootstrap/less/bootstrap.less!" />
     <can-import from="donejs-chat/styles.less!" />
     <can-import from="donejs-chat/app" as="viewModel" />
-    <can-import from="donejs-chat/loader.component!" />
 
     <div class="container">
       <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
         {{#switch page}}
           {{#case 'chat'}}
-          <can-import from="donejs-chat/messages/" can-tag="chat-loader">
-            <chat-messages username="{username}" class="col-sm-6 col-sm-offset-3"></chat-messages>
+          <can-import from="donejs-chat/messages/">
+            {{#if isPending}}
+              Loading...
+            {{else}}
+              <chat-messages></chat-messages>
+            {{/if}}
           </can-import>
           {{/case}}
 
           {{#default}}
-          <can-import from="donejs-chat/home.component!" can-tag="chat-loader">
-            <chat-home page="{page}" username="{username}" class="well col-sm-4 col-sm-offset-4"></chat-home>
+          <can-import from="donejs-chat/home.component!">
+            {{#if isPending}}
+              Loading...
+            {{else}}
+              <chat-home page="{page}" class="well"></chat-home>
+            {{/if}}
           </can-import>
           {{/default}}
         {{/switch}}
+        </div>
       </div>
     </div>
 

@@ -73,8 +73,7 @@
     "generator-donejs": "^0.2.11",
     "jquery": "^2.1.4",
     "socket.io-client": "^1.3.6",
-    "steal": "^0.12.0-pre.0",
-    "yeoman-environment": "^1.2.7"
+    "steal": "^0.12.0-pre.0"
   },
   "devDependencies": {
     "documentjs": "^0.3.0",

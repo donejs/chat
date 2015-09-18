@@ -1,8 +1,8 @@
-import AppMap from "can-ssr/app-map";
-import route from "can/route/";
+import AppMap from 'can-ssr/app-map';
+import route from 'can/route/';
+import './utils';
 import 'can/map/define/';
-
-import "can/route/pushstate/";
+import 'can/route/pushstate/';
 
 const AppViewModel = AppMap.extend({
   define: {
@@ -10,15 +10,12 @@ const AppViewModel = AppMap.extend({
       value: 'donejs-chat',
       serialize: false
     },
-    username: {
-      value: ''
-    },
     page: {
       value: ''
     }
   }
 });
 
-route('/:username/:page', { page: 'login', username: '' });
+route('/:page', { page: 'home' });
 
 export default AppViewModel;

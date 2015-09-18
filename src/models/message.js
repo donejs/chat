@@ -10,7 +10,15 @@ export const Message = can.Map.extend({
 
 Message.List = can.List.extend({
   Map: Message
-}, {});
+}, {
+  statistics() {
+    let users = {};
+    this.each(message => users[message.name] = (users[message.name] || 0) + 1);
+    return can.map(users, (count, name) => {
+      return { name, count };
+    });
+  }
+});
 
 export const messageConnection = superMap({
   url: '/api/messages',
