@@ -1,8 +1,13 @@
 import AppMap from 'can-ssr/app-map';
 import route from 'can/route/';
-import './utils';
+import platform from 'steal-platform';
 import 'can/map/define/';
 import 'can/route/pushstate/';
+import './utils';
+
+if(platform.isCordova || platform.isNW) {
+  route.defaultBinding = 'hashchange';
+}
 
 const AppViewModel = AppMap.extend({
   define: {
