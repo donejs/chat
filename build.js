@@ -35,8 +35,7 @@ var nwOptions = {
     "package.json",
     "app.html",
 
-    "node_modules/steal/steal.production.js",
-    "node_modules/place-my-order-assets/images/**/*"
+    "node_modules/steal/steal.production.js"
   ],
   version: "0.12.3"
 };

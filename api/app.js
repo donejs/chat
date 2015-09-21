@@ -8,6 +8,11 @@ var app = feathers();
 // Add REST API support
 app.configure(feathers.rest())
   .configure(feathers.socketio())
+  .use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+  })
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use('/messages', messages);
