@@ -33,4 +33,5 @@ docs
 db-data/
 dist/
 build/
+cache/
 .divshot-cache/
