@@ -23,7 +23,7 @@
     <input type="text" class="form-control" id="name" placeholder="Your name" can-value="{name}">
   </div>
   <div class="col-sm-7">
-    <input type="text" class="form-control" id="message" placeholder="Your message" can-value="{message}" (enter)="{send}">
+    <input type="text" class="form-control" autocomplete="off" id="message" placeholder="Your message" can-value="{message}" (enter)="{send}">
   </div>
   <div class="col-sm-2">
     <button type="submit" class="btn btn-primary btn-block" (click)="{send}">Send</button>

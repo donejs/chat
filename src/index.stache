@@ -28,7 +28,7 @@
             {{#if isPending}}
               Loading...
             {{else}}
-              <chat-home page="{page}" class="well"></chat-home>
+              <chat-home page="{page}"></chat-home>
             {{/if}}
           </can-import>
           {{/default}}

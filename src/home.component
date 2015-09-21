@@ -6,7 +6,10 @@
   </style>
   <template>
     <can-import from="donejs-chat/models/message" />
-    <h1 class="page-header">donejs-chat</h1>
+    <h1 class="page-header text-center">
+        <img src="http://donejs.com/static/img/donejs-logo-white.svg" alt="DoneJS logo" />
+        <br>Chat
+    </h1>
 
     <can-import from="bit-tabs/unstyled"/>
     
@@ -19,6 +22,6 @@
         </bit-panel>
     </bit-tabs>
 
-    <a can-href="{ page='chat' }" class="btn btn-primary btn-block" (click)="{chat}">Start chat</a>
+    <a can-href="{ page='chat' }" class="btn btn-primary btn-block btn-lg" (click)="{chat}">Start chat</a>
   </template>
 </can-component>
