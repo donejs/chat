@@ -35,6 +35,7 @@
       "generator-donejs",
       "feathers",
       "feathers-memory",
+      "feathers-hooks",
       "body-parser"
     ],
     "map": {
@@ -70,6 +71,7 @@
     "done-component": "^0.2.0",
     "done-css": "^1.1.8",
     "feathers": "^1.1.0",
+    "feathers-hooks": "^0.5.0",
     "feathers-memory": "^0.3.4",
     "generator-donejs": "^0.2.11",
     "jquery": "^2.1.4",
