@@ -3,6 +3,7 @@ import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
 import 'can/map/define/define';
 import io from 'socket.io-client';
+import baseUrl from '../service-base-url';
 
 export const Message = can.Map.extend({
   define: {}
@@ -13,7 +14,7 @@ Message.List = can.List.extend({
 }, {});
 
 export const messageConnection = superMap({
-  url: '/api/messages',
+  url: baseUrl + '/api/messages',
   idProp: 'id',
   Map: Message,
   List: Message.List,
