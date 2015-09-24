@@ -26,7 +26,7 @@ tag('message-model', messageConnection);
 export default Message;
 
 if(typeof io === 'function') {
-  const socket = io();
+  const socket = io('http://donejs-chat.herokuapp.com');
 
   socket.on('messages created', order => messageConnection.createInstance(order));
   socket.on('messages updated', order => messageConnection.updateInstance(order));
