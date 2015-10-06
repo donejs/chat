@@ -32,7 +32,14 @@ app.service('messages').before({
   }
 }).after({
   create: function(hook, next) {
-    
+    var keys = Object.keys(this.store);
+    if(keys.length > 20) {
+      this.remove(keys[0], function(error) {
+        next(error);
+      });
+    } else {
+      return next();
+    }
   }
 });
 
