@@ -30,6 +30,10 @@ app.service('messages').before({
     };
     next();
   }
+}).after({
+  create: function(hook, next) {
+    
+  }
 });
 
 module.exports = app;

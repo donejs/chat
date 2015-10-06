@@ -5,7 +5,7 @@ F.attach(QUnit);
 
 QUnit.module('donejs-chat functional smoke test', {
   beforeEach() {
-    F.open('.');
+    F.open('../development.html');
   }
 });
 

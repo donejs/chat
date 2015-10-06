@@ -11,14 +11,14 @@ var cordovaOptions = {
   id: "com.donejs.chat",
   name: "DoneJS chat",
   platforms: ["ios"],
-  index: __dirname + "/app.html",
+  plugins: ["cordova-plugin-transport-security"],
+  index: __dirname + "/production.html",
   glob: [
     "node_modules/steal/steal.production.js"
   ]
 };
 
 var stealCordova = require("steal-cordova")(cordovaOptions);
-
 // Check if the cordova option is passed.
 var buildCordova = process.argv.indexOf("cordova") > 0;
 
@@ -31,8 +31,7 @@ var nwOptions = {
   platforms: ["osx"],
   files: [
     "package.json",
-    "app.html",
-
+    "production.html",
     "node_modules/steal/steal.production.js"
   ],
   version: "0.12.3"
@@ -45,7 +44,6 @@ var buildNW = process.argv.indexOf("nw") > 0;
 
 if(buildNW) {
   buildPromise = buildPromise.then(function(buildResult){
-    console.log("NW")
     stealNw(nwOptions, buildResult);
   });
 }

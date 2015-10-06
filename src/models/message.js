@@ -2,8 +2,9 @@ import can from 'can';
 import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
 import 'can/map/define/define';
-import io from 'socket.io-client';
-import baseUrl from '../service-base-url';
+import io from 'steal-socket.io';
+
+const socket = io('http://chat.donejs.com');
 
 export const Message = can.Map.extend({
   define: {}
@@ -14,7 +15,7 @@ Message.List = can.List.extend({
 }, {});
 
 export const messageConnection = superMap({
-  url: baseUrl + '/api/messages',
+  url: 'http://chat.donejs.com/api/messages',
   idProp: 'id',
   Map: Message,
   List: Message.List,
@@ -23,12 +24,11 @@ export const messageConnection = superMap({
 
 tag('message-model', messageConnection);
 
+socket.on('messages created',
+  order => messageConnection.createInstance(order));
+socket.on('messages updated',
+  order => messageConnection.updateInstance(order));
+socket.on('messages removed',
+  order => messageConnection.destroyInstance(order));
+
 export default Message;
-
-if(typeof io === 'function') {
-  const socket = io('http://donejs-chat.herokuapp.com');
-
-  socket.on('messages created', order => messageConnection.createInstance(order));
-  socket.on('messages updated', order => messageConnection.updateInstance(order));
-  socket.on('messages removed', order => messageConnection.destroyInstance(order));
-}
