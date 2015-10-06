@@ -1,7 +1,7 @@
 {
   "name": "donejs-chat",
   "version": "0.0.0",
-  "description": "A chat application. Built with DoneJS",
+  "description": "",
   "homepage": "",
   "author": {
     "name": "",
@@ -13,9 +13,9 @@
     "start": "can-serve --port 8080",
     "develop": "can-serve --develop --port 8080",
     "document": "documentjs",
-    "build": "steal-tools"
+    "build": "node build"
   },
-  "main": "app.html",
+  "main": "development.html",
   "files": [
     "src"
   ],
@@ -38,56 +38,38 @@
       "feathers-hooks",
       "body-parser"
     ],
-    "map": {
-      "socket.io-client": "socket.io-client/socket.io"
-    },
     "envs": {
-      "server-development": {
-        "map": {
-          "socket.io-client/socket.io": "@empty"
-        }
-      },
       "server-production": {
-        "baseURL": "https://donejs-chat.divshot.io/",
-        "map": {
-          "socket.io-client/socket.io": "@empty"
-        }
-      }
-    },
-    "meta": {
-      "socket.io-client/socket.io": {
-        "format": "global",
-        "exports": "io"
+        "baseURL": "https://donejs-chat.divshot.io/"
       }
     }
   },
   "dependencies": {
-    "bit-tabs": "^0.1.3",
-    "body-parser": "^1.14.0",
+    "bit-tabs": "^0.2.0",
+    "body-parser": "^1.14.1",
     "bootstrap": "^3.3.5",
-    "can": "^2.3.0-pre.11",
-    "can-connect": "^0.2.8",
-    "can-ssr": "^0.7.0",
-    "done-autorender": "^0.4.1",
-    "done-component": "^0.2.0",
-    "done-css": "^1.1.8",
-    "feathers": "^1.1.0",
-    "feathers-hooks": "^0.5.0",
+    "can": "^2.3.0-beta.1",
+    "can-connect": "^0.3.0",
+    "can-ssr": "^0.9.1",
+    "done-autorender": "^0.4.2",
+    "done-component": "^0.2.1",
+    "done-css": "^1.1.10",
+    "feathers": "^1.1.1",
+    "feathers-hooks": "^0.5.1",
     "feathers-memory": "^0.3.4",
-    "generator-donejs": "^0.2.11",
+    "generator-donejs": "^0.3.0",
     "jquery": "^2.1.4",
-    "socket.io-client": "^1.3.6",
-    "steal": "^0.12.0-pre.0",
-    "steal-platform": "0.0.4"
+    "steal": "^0.12.0-pre.9",
+    "steal-socket.io": "^1.0.0"
   },
   "devDependencies": {
-    "documentjs": "^0.3.0",
-    "donejs-deploy": "^0.1.6",
+    "documentjs": "^0.3.1",
+    "donejs-deploy": "^0.2.0",
     "funcunit": "^3.0.0",
     "steal-cordova": "^0.1.1",
     "steal-nw": "^0.1.3",
     "steal-qunit": "^0.1.1",
-    "steal-tools": "^0.12.0-pre.3",
+    "steal-tools": "^0.12.0-pre.4",
     "testee": "^0.2.1"
   },
   "donejs": {
@@ -109,8 +91,8 @@
     }
   },
   "window": {
+    "toolbar": false,
     "width": 1060,
-    "height": 625,
-    "toolbar": false
+    "height": 625
   }
 }

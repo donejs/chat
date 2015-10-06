@@ -1,7 +1,5 @@
-<can-import from="donejs-chat/models/message" />
-
+<h5><a can-href="{ page='home' }">Home</a></h5>
 <message-model get-list="{}">
-  <h5><a can-href="{ page='home' }">Home</a></h5>
   <div class="list-group">
     {{#each ./value}}
       <a class="list-group-item">
@@ -16,16 +14,13 @@
     {{/if}}
   </div>
 </message-model>
-
-
 <div class="row">
   <div class="col-sm-3">
-    <input type="text" class="form-control" id="name" placeholder="Your name" can-value="{name}">
+    <input type="text" class="form-control" id="name"
+        placeholder="Your name" {($value)}="name">
   </div>
-  <div class="col-sm-7">
-    <input type="text" class="form-control" autocomplete="off" id="message" placeholder="Your message" can-value="{message}" (enter)="{send}">
-  </div>
-  <div class="col-sm-2">
-    <button type="submit" class="btn btn-primary btn-block" (click)="{send}">Send</button>
+  <div class="col-sm-9">
+    <input type="text" class="form-control" id="message"
+        placeholder="Your message" {($value)}="message" ($enter)="send">
   </div>
 </div>

@@ -9,11 +9,11 @@ const store = fixture.store([{
 }]);
 
 fixture({
-  'GET /api/messages': store.findAll,
-  'GET /api/messages/{id}': store.findOne,
-  'POST /api/messages': store.create,
-  'PUT /api/messages/{id}': store.update,
-  'DELETE /api/messages/{id}': store.destroy
+  'GET http://chat.donejs.com/api/messages': store.findAll,
+  'GET http://chat.donejs.com/api/messages/{id}': store.findOne,
+  'POST http://chat.donejs.com/api/messages': store.create,
+  'PUT http://chat.donejs.com/api/messages/{id}': store.update,
+  'DELETE http://chat.donejs.com/api/messages/{id}': store.destroy
 });
 
 export default store;
