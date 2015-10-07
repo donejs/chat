@@ -14,10 +14,10 @@
 
     <bit-tabs tabs-class="nav nav-tabs">
       <bit-panel title="CanJS">
-        CanJS provides the MV*
+        <p>CanJS provides the MV*</p>
       </bit-panel>
       <bit-panel title="StealJS">
-        StealJS provides the infrastructure.
+        <p>StealJS provides the infrastructure.</p>
       </bit-panel>
     </bit-tabs>
 
