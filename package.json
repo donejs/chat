@@ -15,7 +15,7 @@
     "document": "documentjs",
     "build": "node build"
   },
-  "main": "development.html",
+  "main": "production.html",
   "files": [
     "src"
   ],
