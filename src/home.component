@@ -7,7 +7,7 @@
   <template>
     <can-import from="bit-tabs/unstyled" />
     <h1 class="page-header text-center">
-      <img src="http://donejs.com/static/img/donejs-logo-white.svg"
+      <img src="http://donejs.com/static/img/donejs-logo-ie.png" srcset="http://donejs.com/static/img/donejs-logo-white.svg"
         alt="DoneJS logo" style="width: 100%;" />
       <br>Chat
     </h1>
