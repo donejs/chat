@@ -3,6 +3,7 @@ import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
 import 'can/map/define/define';
 import io from 'steal-socket.io';
+import 'jquery-transport-xdr';
 
 const socket = io('http://chat.donejs.com');
 

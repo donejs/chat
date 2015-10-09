@@ -2,6 +2,7 @@ var feathers = require('feathers');
 var memory = require('feathers-memory');
 var hooks = require('feathers-hooks');
 var bodyParser = require('body-parser');
+var ieCors = require('express-ie-cors');
 
 var messages = memory('messages');
 var app = feathers();
@@ -16,6 +17,7 @@ app.configure(feathers.rest())
     res.header('Access-Control-Allow-Methods', 'DELETE, GET, HEAD, POST, PUT, OPTIONS, TRACE');
     next();
   })
+  .use(ieCors({ contentType: 'application/x-www-form-urlencoded' }))
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use('/messages', messages);
