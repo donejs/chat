@@ -4,6 +4,7 @@ import tag from 'can-connect/can/tag/';
 import 'can/map/define/define';
 import io from 'steal-socket.io';
 import 'jquery-transport-xdr';
+import 'donejs-chat/prefilter';
 
 const socket = io('http://chat.donejs.com');
 
