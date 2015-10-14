@@ -52,7 +52,7 @@
     "can-connect": "^0.3.0",
     "can-ssr": "^0.9.1",
     "done-autorender": "^0.4.2",
-    "done-component": "^0.2.1",
+    "done-component": "^0.3.0",
     "done-css": "^1.1.10",
     "express-ie-cors": "^0.9.4",
     "feathers": "^1.1.1",
