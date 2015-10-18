@@ -21,6 +21,6 @@
       </bit-panel>
     </bit-tabs>
 
-    <a can-href="{ page='chat' }" class="btn btn-primary btn-block btn-lg">Start chat</a>
+    <a href="{{routeUrl page='chat'}}" class="btn btn-primary btn-block btn-lg">Start chat</a>
   </template>
 </can-component>

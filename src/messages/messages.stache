@@ -1,4 +1,4 @@
-<h5><a can-href="{ page='home' }">Home</a></h5>
+<h5><a href="{{routeUrl page='home'}}">Home</a></h5>
 <message-model get-list="{}">
   <div class="list-group">
     {{#each ./value}}
@@ -6,12 +6,11 @@
         <h4 class="list-group-item-heading">{{name}}</h4>
         <p class="list-group-item-text">{{message}}</p>
       </a>
+    {{else}}
+      <a class="list-group-item">
+        <h4 class="list-group-item-heading">No messages</h4>
+      </a>
     {{/each}}
-    {{^if ./value.length}}
-    <a class="list-group-item">
-      <h4 class="list-group-item-heading">No messages</h4>
-    </a>
-    {{/if}}
   </div>
 </message-model>
 <div class="row">
@@ -21,6 +20,6 @@
   </div>
   <div class="col-sm-9">
     <input type="text" class="form-control" id="message"
-        placeholder="Your message" {($value)}="message" ($enter)="send">
+        placeholder="Your message" {($value)}="message" ($enter)="send()">
   </div>
 </div>
