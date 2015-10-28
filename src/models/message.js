@@ -27,10 +27,10 @@ export const messageConnection = superMap({
 tag('message-model', messageConnection);
 
 socket.on('messages created',
-  order => messageConnection.createInstance(order));
+  message => messageConnection.createInstance(message));
 socket.on('messages updated',
-  order => messageConnection.updateInstance(order));
+  message => messageConnection.updateInstance(message));
 socket.on('messages removed',
-  order => messageConnection.destroyInstance(order));
+  message => messageConnection.destroyInstance(message));
 
 export default Message;

@@ -9,8 +9,8 @@ export const ViewModel = Map.extend({
   send() {
     new Message({
       name: this.attr('name'),
-      message: this.attr('message')
-    }).save().then(msg => this.attr('message', ''));
+      body: this.attr('body')
+    }).save().then(msg => this.attr('body', ''));
   }
 });
 
