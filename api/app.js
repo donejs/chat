@@ -20,14 +20,30 @@ app.configure(feathers.rest())
   .use(ieCors({ contentType: 'application/x-www-form-urlencoded' }))
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
-  .use('/messages', messages);
+  .use('/messages', messages)
+  .use(function(err, req, res, next) {
+    res.status(err.code || 500);
+    res.json({
+      name: err.name || 'General error',
+      message: err.message
+    });
+  });
+
+function isString(txt) {
+  return txt && typeof txt === 'string' && txt.trim() !== '';
+}
 
 app.service('messages').before({
   create: function(hook, next) {
     var data = hook.data;
+
+    if(!(isString(data.name) && isString(data.body))) {
+      return next(new Error('A message needs a string name and body'));
+    }
+
     hook.data = {
       name: data.name.substring(0, 50),
-      message: data.message.substring(0, 1000),
+      body: data.body.substring(0, 1000),
       created_at: new Date()
     };
     next();
