@@ -1,25 +1,27 @@
 <h5><a href="{{routeUrl page='home'}}">Home</a></h5>
-<message-model get-list="{}">
-  <div class="list-group">
-    {{#each ./value}}
-      <a class="list-group-item">
-        <h4 class="list-group-item-heading">{{name}}</h4>
-        <p class="list-group-item-text">{{message}}</p>
-      </a>
-    {{else}}
-      <a class="list-group-item">
-        <h4 class="list-group-item-heading">No messages</h4>
-      </a>
-    {{/each}}
-  </div>
+<message-model get-list="{}" class="list-group">
+  {{#each ./value}}
+    <a class="list-group-item">
+      <h4 class="list-group-item-heading">{{name}}</h4>
+      <p class="list-group-item-text">{{body}}</p>
+    </a>
+  {{else}}
+    <a class="list-group-item">
+      <h4 class="list-group-item-heading">No messages</h4>
+    </a>
+  {{/each}}
 </message-model>
-<div class="row">
+
+<form class="row" ($submit)="send(%event)">
   <div class="col-sm-3">
-    <input type="text" class="form-control" id="name"
-        placeholder="Your name" {($value)}="name">
+    <input type="text" class="form-control" placeholder="Your name"
+           {($value)}="name"/>
   </div>
-  <div class="col-sm-9">
-    <input type="text" class="form-control" id="message"
-        placeholder="Your message" {($value)}="message" ($enter)="send()">
+  <div class="col-sm-6">
+    <input type="text" class="form-control" placeholder="Your message"
+           {($value)}="body"/>
   </div>
-</div>
+  <div class="col-sm-3">
+    <input type="submit" class="btn btn-primary btn-block" value="Send"/>
+  </div>
+</form>
