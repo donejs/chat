@@ -1,5 +1,4 @@
-import fixture from 'can-connect/fixture/';
-
+// Main file that loads all model fixtures
 
 
 import 'donejs-chat/models/fixtures/message';

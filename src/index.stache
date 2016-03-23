@@ -1,8 +1,6 @@
 <html>
   <head>
     <title>{{title}}</title>
-    {{asset "css"}}
-    {{asset "html5shiv"}}
   </head>
   <body>
     <can-import from="bootstrap/less/bootstrap.less!" />
@@ -33,8 +31,6 @@
       </div>
     </div>
 
-    {{asset "inline-cache"}}
-
     {{#switch env.NODE_ENV}}
       {{#case "production"}}
         <script src="{{joinBase 'node_modules/steal/steal.production.js'}}"  main="donejs-chat/index.stache!done-autorender"></script>
@@ -43,5 +39,4 @@
         <script src="/node_modules/steal/steal.js"></script>
       {{/default}}
     {{/switch}}
-  </body>
 </html>

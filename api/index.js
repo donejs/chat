@@ -1,5 +1,5 @@
 var path = require('path');
-var server = require('can-ssr/server');
+var server = require('done-server');
 var api = require('./app');
 var app = server({
   path: path.join(__dirname, '..'),

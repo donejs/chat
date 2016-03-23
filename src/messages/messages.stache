@@ -1,14 +1,16 @@
+<can-import from="donejs-chat/models/message" />
 <h5><a href="{{routeUrl page='home'}}">Home</a></h5>
+
 <message-model get-list="{}" class="list-group">
   {{#each ./value}}
-    <a class="list-group-item">
+    <div class="list-group-item">
       <h4 class="list-group-item-heading">{{name}}</h4>
       <p class="list-group-item-text">{{body}}</p>
-    </a>
+    </div>
   {{else}}
-    <a class="list-group-item">
+    <div class="list-group-item">
       <h4 class="list-group-item-heading">No messages</h4>
-    </a>
+    </div>
   {{/each}}
 </message-model>
 
