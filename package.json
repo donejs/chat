@@ -91,5 +91,8 @@
     "toolbar": false,
     "width": 1060,
     "height": 625
+  },
+  "engines": {
+    "node": "0.12"
   }
 }
