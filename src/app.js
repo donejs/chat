@@ -1,14 +1,13 @@
-import Map from "can-map";
+import DefineMap from "can-define/map/";
 import route from "can-route";
 import "can-route-pushstate";
-import 'can-map-define';
 
-const AppViewModel = Map.extend({
-  define: {
-    title: {
-      value: 'donejs-chat',
-      serialize: false
-    }
+const AppViewModel = DefineMap.extend({
+  route: "string",
+  page: "string",
+  title: {
+    value: 'donejs-chat',
+    serialize: false
   }
 });
 
