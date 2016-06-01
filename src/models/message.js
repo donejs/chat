@@ -5,7 +5,9 @@ import DefineList from "can-define/list/";
 import io from 'steal-socket.io';
 
 export const Message = DefineMap.extend({
-  "*": "string"
+  seal: false
+}, {
+  id: "*"
 });
 
 Message.List = DefineList.extend({
