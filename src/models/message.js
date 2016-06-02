@@ -1,16 +1,18 @@
-import can from 'can';
 import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
-import 'can/map/define/define';
+import DefineMap from "can-define/map/";
+import DefineList from "can-define/list/";
 import io from 'steal-socket.io';
 
-export const Message = can.Map.extend({
-  define: {}
+export const Message = DefineMap.extend({
+  seal: false
+}, {
+  id: "*"
 });
 
-Message.List = can.List.extend({
-  Map: Message
-}, {});
+Message.List = DefineList.extend({
+  "*": Message
+});
 
 export const messageConnection = superMap({
   url: 'http://chat.donejs.com/api/messages',

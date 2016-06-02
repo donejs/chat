@@ -8,6 +8,8 @@
   </style>
   <template>
     <can-import from="bit-tabs/unstyled" />
+    <can-import from="can-stache/helpers/route" />
+
     <h1 class="page-header text-center">
       <img src="http://donejs.com/static/img/donejs-logo-white.svg"
         alt="DoneJS logo" style="width: 100%;" />
