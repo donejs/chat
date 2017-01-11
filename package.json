@@ -20,7 +20,7 @@
     "src"
   ],
   "keywords": [],
-  "steal": {
+  "system": {
     "main": "donejs-chat/index.stache!done-autorender",
     "directories": {
       "lib": "src"
