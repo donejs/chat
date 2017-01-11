@@ -6,7 +6,7 @@
       padding: 10px;
     }
   </style>
-  <template>
+  <view>
     <can-import from="bit-tabs/unstyled" />
     <can-import from="can-stache/helpers/route" />
 
@@ -29,5 +29,5 @@
        class="btn btn-primary btn-block btn-lg">
       Start chat
     </a>
-  </template>
+  </view>
 </can-component>
