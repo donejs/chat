@@ -42,7 +42,7 @@
     ]
   },
   "dependencies": {
-    "bit-tabs": "^1.0.0-alpha.0",
+    "bit-tabs": "^1.0.0",
     "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
     "can-component": "^3.0.0",
@@ -54,16 +54,16 @@
     "can-route": "^3.0.0",
     "can-route-pushstate": "^3.0.0",
     "can-zone": "^0.6.0",
-    "done-autorender": "^1.0.0-alpha.0",
+    "done-autorender": "^1.0.0",
     "done-component": "^1.0.0",
-    "done-css": "~3.0.0-alpha.0",
-    "done-serve": "^1.0.0-alpha.0",
+    "done-css": "^3.0.0",
+    "done-serve": "^1.0.0",
     "express-ie-cors": "^0.9.4",
-    "feathers": "^2.1.1",
-    "feathers-hooks": "^1.8.1",
-    "feathers-memory": "^1.1.0",
-    "generator-donejs": "^1.0.2",
-    "jquery": "~3.2.1",
+    "feathers": "^1.1.1",
+    "feathers-hooks": "^0.5.1",
+    "feathers-memory": "^0.3.4",
+    "generator-donejs": "^1.0.0",
+    "jquery": "~2.2.1",
     "steal": "^1.0.0",
     "steal-less": "^1.0.2",
     "steal-socket.io": "^4.0.9",
@@ -72,14 +72,14 @@
   "devDependencies": {
     "can-fixture": "^1.0.0",
     "documentjs": "^0.4.2",
-    "donejs-cli": "^1.0.1",
+    "donejs-cli": "^1.0.0",
     "donejs-deploy": "^0.4.0",
-    "funcunit": "~3.2.0",
+    "funcunit": "^3.0.0",
     "steal-cordova": "^1.0.0",
     "steal-nw": "^1.0.0",
     "steal-qunit": "^1.0.0",
     "steal-tools": "^1.0.0",
-    "testee": "^0.3.1"
+    "testee": "^0.4.0"
   },
   "donejs": {
     "deploy": {
