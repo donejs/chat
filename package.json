@@ -39,7 +39,7 @@
     "bit-tabs": "^0.2.0",
     "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
-    "can": "^2.3.16",
+    "can": "^3.5.1",
     "can-connect": "^0.5.0",
     "can-zone": "^0.4.4",
     "done-autorender": "^0.7.3",
@@ -53,7 +53,8 @@
     "generator-donejs": "^0.8.0",
     "jquery": "~2.2.1",
     "steal": "^0.15.0",
-    "steal-socket.io": "^2.0.0"
+    "steal-socket.io": "^2.0.0",
+    "steal-stache": "^3.0.5"
   },
   "devDependencies": {
     "can-fixture": "^0.1.2",
