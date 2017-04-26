@@ -1,6 +1,6 @@
-import Component from 'can/component/';
-import Map from 'can/map/';
-import 'can/map/define/';
+import Component from 'can-component';
+import Map from 'can-map';
+import 'can-map-define';
 import './messages.less!';
 import view from './messages.stache!';
 import Message from '../models/message';
