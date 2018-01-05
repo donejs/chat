@@ -39,4 +39,5 @@
         <script src="/node_modules/steal/steal.js"></script>
       {{/default}}
     {{/switch}}
+  </body>
 </html>
