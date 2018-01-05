@@ -20,8 +20,8 @@
     "src"
   ],
   "keywords": [],
-  "system": {
-    "main": "donejs-chat/index.stache!done-autorender",
+  "steal": {
+    "main": "donejs-chat/index.stache!done-autorender/no-zone",
     "directories": {
       "lib": "src"
     },
