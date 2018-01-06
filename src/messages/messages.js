@@ -2,7 +2,7 @@ import Component from "can-component";
 import DefineMap from "can-define/map/";
 import "./messages.less";
 import view from "./messages.stache";
-import Message from "~/models/message";
+import Message from "donejs-chat/models/message";
 
 export const ViewModel = DefineMap.extend({
   name: "string",
