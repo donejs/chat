@@ -1,16 +1,16 @@
-import DefineMap from "can-define/map/";
-import route from "can-route";
-import "can-route-pushstate";
+import { DefineMap, route } from 'can';
+import 'can-route-pushstate';
 
 const AppViewModel = DefineMap.extend({
-  route: "string",
-  page: "string",
+  route: 'string',
+  page: 'string',
   title: {
-    value: 'donejs-chat',
+    default: 'donejs-chat',
     serialize: false
   }
 });
 
-route('/{page}', { page: 'home' });
+route.register('/{page}', { page: 'home' });
+route.start();
 
 export default AppViewModel;

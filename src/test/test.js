@@ -1,7 +1,7 @@
 // Model tests
 import 'donejs-chat/models/test';
 
-//Component tests
+// Component tests
 import 'donejs-chat/messages/messages_test';
 
 // Functional tests
