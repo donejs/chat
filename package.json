@@ -68,7 +68,6 @@
     "can-view-autorender": "^5.0.0-pre.0",
     "documentjs": "^0.4.2",
     "donejs-cli": "^1.0.0",
-    "donejs-deploy": "^0.4.0",
     "funcunit": "^3.0.0",
     "steal-cordova": "^1.0.0",
     "steal-nw": "^1.0.0",
