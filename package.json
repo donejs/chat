@@ -20,7 +20,7 @@
     "src"
   ],
   "keywords": [],
-  "system": {
+  "steal": {
     "main": "donejs-chat/index.stache!done-autorender",
     "directories": {
       "lib": "src"
@@ -52,14 +52,14 @@
     "done-autorender": "^2.1.1",
     "done-component": "^2.1.0",
     "done-css": "^3.0.0",
-    "done-serve": "^2.2.0",
+    "done-serve": "^3.0.0-pre.0",
     "express-ie-cors": "^0.9.4",
     "feathers": "^1.1.1",
     "feathers-hooks": "^0.5.1",
     "feathers-memory": "^0.3.4",
     "generator-donejs": "^1.0.0",
     "jquery": "~2.2.1",
-    "steal": "^2.0.0-pre.3",
+    "steal": "^2.0.0-pre.11",
     "steal-less": "^1.0.2",
     "steal-socket.io": "^4.1.0",
     "steal-stache": "^4.1.0"
@@ -75,31 +75,6 @@
     "steal-qunit": "^1.0.0",
     "steal-tools": "^2.0.0-pre.0",
     "testee": "^0.4.0"
-  },
-  "donejs": {
-    "deploy": {
-      "root": "dist",
-      "services": {
-        "production": {
-          "type": "firebase",
-          "config": {
-            "firebase": "donejs-chat",
-            "public": "./dist",
-            "headers": [
-              {
-                "source": "/**",
-                "headers": [
-                  {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "*"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    }
   },
   "window": {
     "toolbar": false,

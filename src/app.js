@@ -10,7 +10,7 @@ const AppViewModel = DefineMap.extend({
   }
 });
 
-route.register('/{page}', { page: 'home' });
+route.register('{page}', { page: 'home' });
 route.start();
 
 export default AppViewModel;

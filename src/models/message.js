@@ -4,11 +4,14 @@ import { DefineMap, DefineList, realtimeRestModel } from 'can';
 export const Message = DefineMap.extend({
   seal: false
 }, {
-  id: "*"
+  id: {
+    type: 'any',
+    identity: true
+  }
 });
 
 Message.List = DefineList.extend({
-  "*": Message
+  "#": Message
 });
 
 export const messageConnection = realtimeRestModel({
