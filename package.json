@@ -65,6 +65,7 @@
     "steal-stache": "^4.1.0"
   },
   "devDependencies": {
+    "can-route": "^4.1.2",
     "can-view-autorender": "^5.0.0-pre.0",
     "documentjs": "^0.4.2",
     "donejs-cli": "^1.0.0",
