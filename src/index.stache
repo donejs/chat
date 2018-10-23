@@ -5,28 +5,16 @@
   <body>
     <can-import from="bootstrap/less/bootstrap.less" />
     <can-import from="donejs-chat/styles.less" />
-    <can-import from="donejs-chat/app" export-as="viewModel" />
+    <can-import from="donejs-chat/app" export-as="viewModel" route-data="routeData" />
 
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          {{#eq page 'chat'}}
-            <can-import from="donejs-chat/messages/">
-              {{#if isPending}}
-                Loading...
-              {{else}}
-                <chat-messages/>
-              {{/if}}
-            </can-import>
+          {{#if(pageComponent.isResolved)}}
+            {{pageComponent.value}}
           {{else}}
-            <can-import from="donejs-chat/home.component">
-              {{#if isPending}}
-                Loading...
-              {{else}}
-                <chat-home/>
-              {{/if}}
-            </can-import>
-          {{/eq}}
+            Loading...
+          {{/if}}
         </div>
       </div>
     </div>

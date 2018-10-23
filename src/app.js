@@ -1,15 +1,36 @@
-import { DefineMap } from 'can';
-import route from 'can-route-pushstate';
+import { DefineMap, route } from 'can';
+import RoutePushstate from 'can-route-pushstate';
+import 'can-debug#?./is-dev';
 
 const AppViewModel = DefineMap.extend({
-  route: 'string',
-  page: 'string',
+  env: {
+    default: () => ({NODE_ENV:'development'})
+  },
   title: {
-    default: 'donejs-chat',
-    serialize: false
+    default: 'donejs-chat'
+  },
+  routeData: {
+    default: () => route.data
+  },
+  pageComponentModuleName: {
+    get() {
+      switch (this.routeData.page) {
+        case 'chat': return '~/messages/';
+        default: return '~/home.component';
+      }
+    }
+  },
+  pageComponent: {
+    get() {
+      return steal.import(this.pageComponentModuleName)
+      .then(({default: Component}) => {
+        return new Component();
+      });
+    }
   }
 });
 
+route.urlData = new RoutePushstate();
 route.register('{page}', { page: 'home' });
 route.start();
 
