@@ -1,6 +1,12 @@
 import { DefineMap, route } from 'can';
 import RoutePushstate from 'can-route-pushstate';
-import 'can-debug#?./is-dev';
+import debug from 'can-debug#?./is-dev';
+
+//!steal-remove-start
+if(debug) {
+	debug();
+}
+//!steal-remove-end
 
 const AppViewModel = DefineMap.extend({
   env: {
@@ -11,27 +17,26 @@ const AppViewModel = DefineMap.extend({
   },
   routeData: {
     default: () => route.data
-  },
-  pageComponentModuleName: {
-    get() {
-      switch (this.routeData.page) {
-        case 'chat': return '~/messages/';
-        default: return '~/home.component';
-      }
-    }
-  },
-  pageComponent: {
-    get() {
-      return steal.import(this.pageComponentModuleName)
-      .then(({default: Component}) => {
-        return new Component();
-      });
-    }
-  }
+	},
+	pageComponentModuleName: {
+		get() {
+			switch (this.routeData.page) {
+				case 'chat': return '~/pages/messages/';
+				default: return '~/pages/home.component';
+			}
+		}
+	},
+	pageComponent: {
+		get() {
+			return steal.import(this.pageComponentModuleName)
+			.then(({default: Component}) => {
+				return new Component();
+			});
+		}
+	}
 });
 
 route.urlData = new RoutePushstate();
-route.register('{page}', { page: 'home' });
-route.start();
+route.register("{page}", { page: "home" });
 
 export default AppViewModel;

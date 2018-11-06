@@ -1,6 +1,10 @@
 import F from 'funcunit';
 import QUnit from 'steal-qunit';
 
+import 'donejs-chat/models/test';
+
+import '~/pages/messages/messages-test';
+
 F.attach(QUnit);
 
 QUnit.module('donejs-chat functional smoke test', {

@@ -1,5 +1,4 @@
 # Logs
-.DS_Store
 logs
 *.log
 npm-debug.log*
@@ -29,10 +28,7 @@ build/Release
 node_modules
 
 # DoneJS
-docs
-.idea/
-db-data/
-dist/
 build/
 cache/
-.divshot-cache/
+dist/
+docs/

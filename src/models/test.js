@@ -1,3 +1,3 @@
 import './fixtures/';
 
-import './message_test'
+import '~/models/message-test';

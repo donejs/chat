@@ -1,34 +1,36 @@
+import { DefineMap, DefineList, superModel } from 'can';
+import loader from '@loader';
 import io from 'steal-socket.io';
-import { DefineMap, DefineList, realtimeRestModel } from 'can';
 
-export const Message = DefineMap.extend({
+const Message = DefineMap.extend({
   seal: false
 }, {
-  id: {
+  'id': {
     type: 'any',
     identity: true
-  }
+  },
+  name: 'string',
+  body: 'string'
 });
 
 Message.List = DefineList.extend({
-  "#": Message
+  '#': Message
 });
 
-export const messageConnection = realtimeRestModel({
+Message.connection = superModel({
   url: 'http://chat.donejs.com/api/messages',
-  idProp: 'id',
   Map: Message,
   List: Message.List,
   name: 'message'
 });
 
-const socket = io('http://chat.donejs.com');
+const socket = io(loader.serviceBaseURL);
 
 socket.on('messages created',
-  message => messageConnection.createInstance(message));
+  message => Message.connection.createInstance(message));
 socket.on('messages updated',
-  message => messageConnection.updateInstance(message));
+  message => Message.connection.updateInstance(message));
 socket.on('messages removed',
-  message => messageConnection.destroyInstance(message));
+  message => Message.connection.destroyInstance(message));
 
 export default Message;

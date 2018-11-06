@@ -1,4 +1,5 @@
 import { fixture } from 'can';
+import Message from '../message';
 
 const store = fixture.store([{
   id: 0,
@@ -6,11 +7,8 @@ const store = fixture.store([{
 }, {
   id: 1,
   description: 'Second item'
-}]);
+}], Message.connection.algebra);
 
-fixture({
-  'GET http://chat.donejs.com/api/messages': store.getList,
-  'GET http://chat.donejs.com/api/messages/{id}': store.get
-});
+fixture('/api/messages/{id}', store);
 
 export default store;

@@ -3,12 +3,11 @@ import Message from './message';
 
 QUnit.module('models/message');
 
-QUnit.test('getList', function(assert) {
-  var done = assert.async();
-
+QUnit.test('getList', function(){
+  stop();
   Message.getList().then(function(items) {
     QUnit.equal(items.length, 2);
-    QUnit.equal(items[0].description, 'First item');
-    done();
+    QUnit.equal(items.item(0).description, 'First item');
+    start();
   });
 });
