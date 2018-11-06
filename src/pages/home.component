@@ -6,13 +6,12 @@
       padding: 10px;
     }
   </style>
-  <template>
-    <can-import from="bit-tabs/unstyled" />
+  <view>
     <can-import from="can-stache-route-helpers" />
-
+    <can-import from="bit-tabs/unstyled" />
     <h1 class="page-header text-center">
-      <img src="http://donejs.com/static/img/donejs-logo-white.svg"
-        alt="DoneJS logo" style="width: 100%;" />
+      <img src="https://donejs.com/static/img/donejs-logo-white.svg"
+           alt="DoneJS logo" style="width: 100%;" />
       <br>Chat
     </h1>
 
@@ -25,8 +24,9 @@
       </bit-panel>
     </bit-tabs>
 
-    <a href="{{routeUrl(page='chat')}}" class="btn btn-primary btn-block btn-lg">
+    <a href="{{routeUrl(page='chat')}}"
+       class="btn btn-primary btn-block btn-lg">
       Start chat
     </a>
-  </template>
+  </view>
 </can-component>

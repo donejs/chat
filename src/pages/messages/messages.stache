@@ -1,0 +1,29 @@
+<can-import from="can-stache-route-helpers" />
+<h5><a href="{{routeUrl(page='home')}}">Home</a></h5>
+
+{{#if(this.messagesPromise.isResolved)}}
+  {{#for(message of this.messagesPromise.value)}}
+    <div class="list-group-item">
+      <h4 class="list-group-item-heading">{{message.name}}</h4>
+      <p class="list-group-item-text">{{message.body}}</p>
+    </div>
+  {{else}}
+    <div class="list-group-item">
+      <h4 class="list-group-item-heading">No messages</h4>
+    </div>
+  {{/for}}
+{{/if}}
+
+<form class="row" on:submit="this.send(scope.event)">
+  <div class="col-sm-3">
+    <input type="text" class="form-control" placeholder="Your name"
+           value:bind="this.name" />
+  </div>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" placeholder="Your message"
+           value:bind="this.body" />
+  </div>
+  <div class="col-sm-3">
+    <input type="submit" class="btn btn-primary btn-block" value="Send" />
+  </div>
+</form>

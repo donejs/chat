@@ -1,5 +1,5 @@
 @parent donejs-chat
-@module {can.Component} donejs-chat/messages <chat-messages>
+@module {can.Component} ~/pages/messages <chat-messages>
 
 A short description of the chat-messages component
 
