@@ -13,9 +13,7 @@
     "start": "done-serve --port 8080",
     "develop": "done-serve --develop --port 8080",
     "document": "documentjs",
-    "build": "node build",
-    "deploy": "firebase deploy",
-    "deploy:ci": "firebase deploy --token \"$FIREBASE_TOKEN\""
+    "build": "node build"
   },
   "main": "production.html",
   "files": [
@@ -72,7 +70,6 @@
     "can-view-autorender": "^5.0.0",
     "documentjs": "^0.4.2",
     "donejs-cli": "^2.0.0",
-    "firebase-tools": "^7.15.0",
     "funcunit": "^3.2.0",
     "steal-conditional": "^1.1.1",
     "steal-cordova": "^1.0.0",
