@@ -1,0 +1,17 @@
+{
+	"hosting": {
+	  "firebase": "donejs-chat",
+	  "public": "./dist",
+	  "headers": [
+		{
+		  "source": "/**",
+		  "headers": [
+			{
+			  "key": "Access-Control-Allow-Origin",
+			  "value": "*"
+			}
+		  ]
+		}
+	  ]
+	}
+  }
