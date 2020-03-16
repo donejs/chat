@@ -13,7 +13,9 @@
     "start": "done-serve --port 8080",
     "develop": "done-serve --develop --port 8080",
     "document": "documentjs",
-    "build": "node build"
+    "build": "node build",
+    "deploy": "firebase deploy",
+    "deploy:ci": "firebase deploy --token \"$FIREBASE_TOKEN\""
   },
   "main": "production.html",
   "files": [
@@ -54,7 +56,6 @@
     "done-component": "^2.2.0",
     "done-css": "^3.0.2",
     "done-serve": "^3.0.0-pre.3",
-    "donejs-deploy": "^0.4.2",
     "express-ie-cors": "^0.9.4",
     "feathers": "^1.1.1",
     "feathers-hooks": "^0.5.1",
@@ -71,6 +72,7 @@
     "can-view-autorender": "^5.0.0",
     "documentjs": "^0.4.2",
     "donejs-cli": "^2.0.0",
+    "firebase-tools": "^7.15.0",
     "funcunit": "^3.2.0",
     "steal-conditional": "^1.1.1",
     "steal-cordova": "^1.0.0",

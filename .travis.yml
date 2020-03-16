@@ -8,7 +8,7 @@ before_deploy:
 - node build
 - git add dist/ --force
 - git commit -m "Updating build."
-- node_modules/.bin/deploy
+- npm run deploy:ci
 deploy:
   skip_cleanup: true
   provider: heroku
