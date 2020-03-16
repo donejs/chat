@@ -54,6 +54,7 @@
     "done-component": "^2.2.0",
     "done-css": "^3.0.2",
     "done-serve": "^3.0.0-pre.3",
+    "donejs-deploy": "^0.4.2",
     "express-ie-cors": "^0.9.4",
     "feathers": "^1.1.1",
     "feathers-hooks": "^0.5.1",
