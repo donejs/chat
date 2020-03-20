@@ -74,6 +74,7 @@
     "steal-conditional": "^1.1.1",
     "steal-cordova": "^1.0.0",
     "steal-electron": "^1.1.1",
+    "steal-nw": "^1.0.0",
     "steal-qunit": "^2.0.0",
     "steal-tools": "^2.0.6",
     "testee": "^0.9.1"
@@ -84,6 +85,6 @@
     "height": 625
   },
   "engines": {
-    "node": "10.0"
+    "node": ">=10.0"
   }
 }
